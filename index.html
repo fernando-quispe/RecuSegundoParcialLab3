@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>ABM Personas</title>
+        <script src="./clases/Persona.js"></script>
+        <script src="./clases/eTipo.js"></script> 
+        <script src="./clases/Cliente.js"></script> 
+        <script src="./clases/funcionesHtml.js"></script> 
+        <link rel="stylesheet" href="./css/estilo.css"></link> 
+    </head>
+
+    <body class="contenedorGeneral">
+        <div id="filtroCont" class="filtrosCont2">
+            <div id="titulo" class="tituloFormulario">
+                <label>ABM Personas</label><br>
+            </div>        
+            <input type="button" value="Agregar Personas" id = "btnAlta">        
+
+            <div id="contAgregar" class="contenedor" >
+                <h2 class="center">ABM Personas</h2>
+                <label>Id:</label>
+                <input type="text" id="id" class="sinError" name="idPersona" disabled><br><br>
+                <label for="marca">Nombre:</label>
+                <input type="text" id="nombre" class="sinError" name="nombrePersona"><br><br>
+                <label for="modelo">Apellido:</label>
+                <input type="text" id="apellido" class="sinError" name="apellidoPersona"><br><br>
+                <label for="precio">Edad:</label>
+                <input type="number" id="edad" class="sinError" name="edadPersona"><br><br>
+                <label for="sexo">Sexo:</label> <br>
+                <select name="sexoPersona" id="sexo" class="select">
+                    <option value="1" selected>Masculino</option>
+                    <option value="2">Femenino</option>
+                </select><br><br>
+
+                <div id="contenedor2">
+                    <input type="button" value="Agregar" id = "btnAgregar">
+                    <input type="button" value="Eliminar" id = "btnEliminar">
+                    <input type="button" value="Cerrar" id = "btnCerrar">
+                </div>
+            </div>
+        </div>
+
+        <div id="filtroCont" class="filtrosCont">
+            <h2 class="center">Promedio</h2>
+            <label for="promedio">Promedio de la edad:</label>
+            <input type="text" id="promedio" name="promedioText">
+            <input type="button" value="Calcular Promedio" id = "btnPromedio"><br><br>
+
+            <h2 class="center">Filtros</h2>
+            <label for="filtrador">Filtrar por:</label>
+            <select name="filtradorSexo" id="filtroSexo" class="select">                  
+                <option value="1" selected>Masculino</option>
+                <option value="2">Femenino</option>
+            </select><br><br>
+
+            <h2 class="center">Campos Mostrados</h2>
+            <label>Tildar los campos a mostrar:</label><br><br>
+            <input type="checkbox" id="idOcultar" name="idFiltrado" checked>
+            <label for="idOcultar">Id</label>
+            <input type="checkbox" id="nombreOcultar" name="nombreFiltrado" checked>
+            <label for="nombreOcultar">Nombre</label>
+            <input type="checkbox" id="apellidoOcultar" name="apellidoFiltrado" checked>
+            <label for="apellidoOcultar">Apellido</label>
+            <input type="checkbox" id="edadOcultar" name="edadFiltrada"checked>
+            <label for="edadOcultar">Edad</label>
+            <input type="checkbox" id="sexoOcultar" name="sexoFiltrado"checked>
+            <label for="sexoOcultar">Sexo</label><br><br>
+            <input type="button" id="btnLimpiar" value="Vaciar Lista">
+        </div>
+        <h2 class="center">Lista de Personas</h2>        
+        <table id="tabla" class="contenedorTablaHijo">
+            <thead>
+                <tr>
+                    <th name="idTabla">Id</th>
+                    <th name="nombreTabla">Nombre</th>
+                    <th name="apellidoTabla">Apellido</th>
+                    <th name="edadTabla">Edad</th>
+                    <th name="sexoTabla">Sexo</th>
+                </tr>
+            </thead>
+            <tbody id="tCuerpo">
+                
+            </tbody>
+        </table> 
+       
+    </body>
+</html>
